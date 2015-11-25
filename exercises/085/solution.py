@@ -19,15 +19,15 @@ def sort_by_mark(l):
 
 
 def sort_by_name(l):
-    new_list = permute(l)
+    new_list = list(reversed(permute(l)))
     new_list2 = sort_a_list(new_list)
-    return permute(new_list2)
+    return list(reversed(permute(new_list2)))
 
 
 def permute(l):
     new_list = l[:]
     for i in range(len(l)):
-        temp = new_list[i]
+        temp = new_list[i][:]
         new_list[i][0] = temp[1]
         new_list[i][1] = temp[0]
     return new_list
