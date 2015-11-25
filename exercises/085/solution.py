@@ -5,7 +5,7 @@ def sort_a_list(l):
     ok = False
     while(not ok):
         ok = True
-        for i in reversed(range(1,len(l))):
+        for i in reversed(range(1, len(l))):
             if(new_list[i-1] < new_list[i]):
                 temp = new_list[i-1]
                 new_list[i-1] = new_list[i]
